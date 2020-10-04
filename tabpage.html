@@ -45,7 +45,7 @@
 
 
     <div class="jumbotron">
-        <h1 class="display-4">DS Lab Assignment</h1>
+        <h1 class="display-4">Second Page</h1>
         <p class="lead">Go lang studying assignment</p>
         <hr class="my-4">
         <p>assignment submitted by 20007,20019,20010</p>
@@ -53,29 +53,66 @@
     </div>
 
     <ul class="list-group shadow-lg p-3 mb-5 bg-white rounded">
-        {{range $element := .News}}
-        <li class="list-group-item">
+
+            <div class="row row-cols-2">
+                <div class="col">
+
+                    {{range $element := .Politics}}
+                        <li class="list-group-item">
 
 
 
-            <div class="card text-center shadow-lg p-3 mb-5 bg-white rounded">
-                <div class="card-header">
-                    India Today Featured
+                            <div class="card text-center shadow-lg p-3 mb-5 bg-white rounded">
+                                <div class="card-header">
+                                    ---POLITICAL NEWS---
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$element.Title}}</h5>
+                                    <p class="card-text">dsdsd</p>
+                                    <a href="{{$element.Link}}" target="_blank" class="btn btn-primary">Know more</a>
+
+                                </div>
+                                <div class="card-footer text-muted">
+                                </div>
+                            </div>
+
+                        </li>
+
+                    {{end}}
+
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">{{$element.Title}}</h5>
-                    <p class="card-text">{{$element.Description}}</p>
-                    <a href="{{$element.Link}}" target="_blank" class="btn btn-primary">Know more</a>
+                <div class="col">
 
-                </div>
-                <div class="card-footer text-muted">
-                    {{$element.PubDate}}
+                    {{range $element := .Politics}}
+                        <li class="list-group-item">
+
+
+
+                            <div class="card text-center shadow-lg p-3 mb-5 bg-white rounded">
+                                <div class="card-header">
+                                    ---Sushant NEWS---
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$element.Title}}</h5>
+                                    <p class="card-text">dsdsd</p>
+                                    <a href="{{$element.Link}}" target="_blank" class="btn btn-primary">Know more</a>
+
+                                </div>
+                                <div class="card-footer text-muted">
+                                </div>
+                            </div>
+
+                        </li>
+
+                    {{end}}
+
+
                 </div>
             </div>
 
-        </li>
 
-        {{end}}
+
+
 
     </ul>
 

@@ -1,0 +1,11 @@
+// xml to struct https://www.onlinetool.io/xmltogo/
+
+// https://www.indiatoday.in/rss/1206584
+
+// https://timesofindia.indiatimes.com/rssfeeds/7503091.cms
+
+//https://stackoverflow.com/questions/38673673/access-http-response-as-string-in-go
+
+//https://stackoverflow.com/questions/54156119/range-over-string-slice-in-golang-template
+
+//https://www.youtube.com/watch?v=7DXQH7bMvZ8&feature=emb_logo  - using concurrency to get news data from different links
