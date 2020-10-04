@@ -63,7 +63,8 @@ type Rss struct {
 
 type valueWeNeed struct{
 	Title       string
-	Link        string
+	//Link        string
+	Link template.URL
 	//Description testtype
 	Description string
 	PubDate     string
@@ -147,7 +148,7 @@ func extractData(queue chan<- valueWeNeed,title,link,description,pubdate string)
 	e := strings.Index(description, "</a>")
 	description=description[e+4:]
 	p := valueWeNeed{Title: title,
-		Link        :link,
+		Link        :template.URL(link),
 		Description :description,
 		PubDate     :pubdate,
 	}
@@ -240,6 +241,7 @@ func indexPage(w http.ResponseWriter, r *http.Request) {
 	}
 	t, _ := template.ParseFiles("index.html")
 	t.Execute(w, page)
+
 
 
 }
